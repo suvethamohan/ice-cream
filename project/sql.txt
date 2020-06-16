@@ -1,0 +1,65 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 16, 2020 at 07:03 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `new`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `quantity` varchar(20) NOT NULL,
+  `price` double(20,2) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `name`, `quantity`, `price`, `date`) VALUES
+(0, 'Organic Vanilla', '4', 2.50, '0000-00-00'),
+(1, 'choco', '3', 4.00, '0000-00-00'),
+(3, 'ader', '5', 10.00, '0000-00-00'),
+(0, 'fgdf', '3.5', 2.00, '2020-06-17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `two`
+--
+
+CREATE TABLE IF NOT EXISTS `two` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `price` double(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `two`
+--
+
+INSERT INTO `two` (`id`, `name`, `image`, `price`) VALUES
+(1, 'Strawberry Shortcake & Icecream', 'strawberry-shortcake-ice-cream-cake-www.thereciperebel.com-600-4-of-35-500x500.jpg', 5.00),
+(2, 'Cold Coffee & Vanilla Float', 'cofe.jpg', 4.00),
+(3, 'Nuts & Caramel', 'nut.jpg', 4.00),
+(4, 'Organic Vanilla', '129099737-homemade-organic-vanilla-ice-cream-on-a-light-background.jpg', 3.50),
+(5, 'Cotton Candy Flavour Scoop', 'Cotton-Candy-Ice-Cream-13-500x500.jpg', 3.00),
+(6, 'Mango Pop', 'Strawberry_Popsicle_shutterstock_105870989.gif', 2.50),
+(7, 'Black Current', 'ffa2eb263e8ae00ee4dcf8e64a1b6077.jpg', 2.00);
